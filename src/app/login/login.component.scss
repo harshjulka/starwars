@@ -1,0 +1,14 @@
+.login-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+  }
+  
+  .logo-image{
+    background-image: url('/assets/login-logo.png');
+    background-size: cover;
+    margin-left: 40%;
+  }

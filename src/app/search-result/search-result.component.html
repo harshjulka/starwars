@@ -1,0 +1,13 @@
+
+<div class="container">
+  <p>
+    Welcome! {{this.name}}
+  </p>
+  <input type="text" class="search-bar" placeholder="planet name" (keyup)="onSearch($event)">      
+</div>
+
+<div class="">
+  <star-planet *ngFor="let planet of data; trackBy:trackByFn" [data]="planet"></star-planet>
+</div>
+
+<button class="primary-btn" *ngIf="next" mat-button (click)="onNext();">Search</button>

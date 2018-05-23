@@ -7,8 +7,14 @@
     max-width: 90%;
   }
   
-  .logo-image{
+.logo-image{
     background-image: url('/assets/login-logo.png');
     background-size: cover;
     margin-left: 40%;
-  }
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+}

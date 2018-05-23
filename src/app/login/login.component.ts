@@ -56,12 +56,16 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
     }
 
     validate() {
-      console.log('this.password === this.personInfo[0].birth_year', this.password === this.personInfo[0].birth_year);
-      if (this.password === this.personInfo[0].birth_year && this.userName.toLocaleLowerCase() ===
+      if (this.personInfo && this.personInfo.length > 0
+        && this.password === this.personInfo[0].birth_year && this.userName.toLocaleLowerCase() ===
       this.personInfo[0].name.toLocaleLowerCase() ) {
         this.router.navigate(['search']);
       } else {
         this.errorMessage = 'Invalid character name or password';
       }
+    }
+
+    onFocus() {
+      this.errorMessage = '';
     }
 }

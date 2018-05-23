@@ -5,12 +5,12 @@
 </mat-card-header>
 <form class="example-container" [formGroup]="form">
   <mat-form-field class="my-class">
-          <input matInput #input formControlName="userName"  placeholder="charactername">
+          <input matInput #input formControlName="userName" (focus) = "onFocus()" placeholder="charactername">
         </mat-form-field>
   <mat-form-field>
       <input type="password" formControlName="password" placeholder="password" matInput>
   </mat-form-field>
   <button mat-raised-button color="primary" [disabled]="form.invalid"(click)="memberLogIn()">submit</button>
 </form>
-<span *ngIf="errorMessage">{{errorMessage}}</span>
+<span class="error" *ngIf="errorMessage">{{errorMessage}}</span>
 </mat-card>

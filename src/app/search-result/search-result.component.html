@@ -1,11 +1,11 @@
 
-<div class="container">
+<div class="container inner-addon right-addon">
   <p>
     Welcome! {{this.name}}
   </p>
-  <input type="text" class="search-bar" placeholder="planet name" (keyup)="onSearch($event)">      
+  <input type="text" class="search-bar" placeholder="planet name" (keyup)="onSearch($event)">  
+  <i class="fas fa-search" (click)="onClick()"></i>
 </div>
-
 <div class="">
   <star-planet *ngFor="let planet of data; trackBy:trackByFn" [data]="planet"></star-planet>
 </div>

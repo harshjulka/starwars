@@ -31,5 +31,21 @@
     @extend .container;
     margin-top: 10px;
     font-weight: 400;
+}
 
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .fas {
+  position: absolute;
+  padding-left: 10px;
+}
+
+/* align icon */
+.right-addon .fas { 
+    right: 20px;
+    bottom: 20px;
 }

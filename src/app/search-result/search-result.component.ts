@@ -19,7 +19,7 @@ export class SearchResultComponent implements OnInit {
   }
 
   onSearch(e) {
-    const url = (e && e.target) ? 'https://swapi.co/api/planets/?search=' + e.target.value : e;
+    const url = (e && e.target) ? 'https://swapi.co/api/planets/?search=' + (e.target.value ? e.target.value : '') : e;
     this.swap.getPlanets(url).subscribe( (data) => {
       if (this.data) {
         this.data = this.data.concat(data['results']);
@@ -39,4 +39,11 @@ export class SearchResultComponent implements OnInit {
     return index; // or item.id
   }
 
+  onClick() {
+    if (this.next) {
+      this.onSearch(this.next);
+    } else {
+      this.onSearch('https://swapi.co/api/planets/?search=');
+    }
+  }
 }
